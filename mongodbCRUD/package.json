@@ -1,0 +1,15 @@
+{
+  "name": "mongodbcrud",
+  "version": "1.0.0",
+  "description": "basic mongodb crud operations",
+  "main": "connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anil hasda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0"
+  }
+}
