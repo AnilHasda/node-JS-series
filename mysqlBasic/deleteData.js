@@ -3,10 +3,10 @@ async function delteData(){
 let con=await connection();
 con.query("delete from nodeapi where id=10",(error,result)=>{
     if(error){
-        console.log("error while deleting data",error)
+         console.log("Error while deleting data",error);
     }
     else{
-        console.log("Deletion operation success",result)
+        console.log("Deletion operation success",result);
     }
 })
 }
