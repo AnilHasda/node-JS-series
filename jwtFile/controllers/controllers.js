@@ -1,9 +1,8 @@
 
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-const secretKey=process.env.SECRET_KEY || "secretkey";
-dotenv.config({ path:"../.env"});
-console.log(secretKey)
+dotenv.config("../.env");
+const secretKey=process.env.SECRET_KEY;
 export const getData=(req,resp)=>{
     resp.send("This is test message");
 }
