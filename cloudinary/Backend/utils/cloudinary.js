@@ -1,5 +1,6 @@
 import {v2 as cloudinary} from 'cloudinary';
 import dotenv from "dotenv";
+import fs from "fs";
 // Configuration
 cloudinary.config({ 
     cloud_name: process.env.CLOUDINARY_NAME, 
@@ -14,8 +15,10 @@ cloudinary.config({
 const uploadResult=await cloudinary.uploader.upload(filePath,{resource_type:'image'});
 if(uploadResult){
     console.log("File uploaded successfully");
+    fs.unlinkSync(filePath);
     return uploadResult;
 }else{
+    fs.unlinkSync(filePath);
     console.log("Failed to upload files")
 }
     }catch(error){
